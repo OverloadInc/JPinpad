@@ -31,8 +31,8 @@ public class FrameInicio extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         mainPanel = new javax.swing.JPanel();
+        titlePanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
-        btnStart = new javax.swing.JButton();
         menuPanel = new javax.swing.JPanel();
         lblPort = new javax.swing.JLabel();
         txtPort = new javax.swing.JTextField();
@@ -44,15 +44,20 @@ public class FrameInicio extends javax.swing.JFrame {
         txtDataBit = new javax.swing.JTextField();
         lblStopBit = new javax.swing.JLabel();
         txtStopBit = new javax.swing.JTextField();
+        btnStart = new javax.swing.JButton();
+        initPanel = new javax.swing.JPanel();
         btnNext = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("JPinpad v0.1");
-        setPreferredSize(new java.awt.Dimension(400, 300));
+        setName("frmInit"); // NOI18N
 
         mainPanel.setName("mainPanel"); // NOI18N
         mainPanel.setPreferredSize(new java.awt.Dimension(400, 300));
         mainPanel.setLayout(new java.awt.BorderLayout());
+
+        titlePanel.setName("titlePanel"); // NOI18N
+        titlePanel.setLayout(new java.awt.BorderLayout());
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -61,21 +66,9 @@ public class FrameInicio extends javax.swing.JFrame {
         lblTitle.setMinimumSize(new java.awt.Dimension(206, 33));
         lblTitle.setName("lblTitle"); // NOI18N
         lblTitle.setPreferredSize(new java.awt.Dimension(206, 33));
-        mainPanel.add(lblTitle, java.awt.BorderLayout.NORTH);
+        titlePanel.add(lblTitle, java.awt.BorderLayout.CENTER);
 
-        btnStart.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnStart.setText("Iniciar");
-        btnStart.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnStart.setMaximumSize(new java.awt.Dimension(63, 33));
-        btnStart.setMinimumSize(new java.awt.Dimension(63, 33));
-        btnStart.setName("btnStart"); // NOI18N
-        btnStart.setPreferredSize(new java.awt.Dimension(63, 33));
-        btnStart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStartActionPerformed(evt);
-            }
-        });
-        mainPanel.add(btnStart, java.awt.BorderLayout.SOUTH);
+        mainPanel.add(titlePanel, java.awt.BorderLayout.NORTH);
 
         menuPanel.setName("menuPanel"); // NOI18N
         menuPanel.setPreferredSize(new java.awt.Dimension(400, 231));
@@ -107,7 +100,7 @@ public class FrameInicio extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weighty = 1.0;
@@ -120,7 +113,7 @@ public class FrameInicio extends javax.swing.JFrame {
         lblVelocity.setName("lblVelocity"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         menuPanel.add(lblVelocity, gridBagConstraints);
 
@@ -135,8 +128,8 @@ public class FrameInicio extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.weighty = 1.0;
         menuPanel.add(txtVelocity, gridBagConstraints);
         txtVelocity.getAccessibleContext().setAccessibleName("");
@@ -148,7 +141,7 @@ public class FrameInicio extends javax.swing.JFrame {
         lblParity.setName("lblParity"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         menuPanel.add(lblParity, gridBagConstraints);
 
@@ -163,8 +156,8 @@ public class FrameInicio extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.weighty = 1.0;
         menuPanel.add(txtParity, gridBagConstraints);
 
@@ -175,7 +168,7 @@ public class FrameInicio extends javax.swing.JFrame {
         lblDataBit.setName("lblDataBit"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         menuPanel.add(lblDataBit, gridBagConstraints);
 
@@ -190,8 +183,8 @@ public class FrameInicio extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
         gridBagConstraints.weighty = 1.0;
         menuPanel.add(txtDataBit, gridBagConstraints);
 
@@ -202,7 +195,7 @@ public class FrameInicio extends javax.swing.JFrame {
         lblStopBit.setName("lblStopBit"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         menuPanel.add(lblStopBit, gridBagConstraints);
 
@@ -217,12 +210,43 @@ public class FrameInicio extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.weighty = 1.0;
         menuPanel.add(txtStopBit, gridBagConstraints);
 
+        btnStart.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnStart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pinpad_start.png"))); // NOI18N
+        btnStart.setText("Iniciar");
+        btnStart.setToolTipText("Iniciar la configuración del dispositivo");
+        btnStart.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnStart.setMaximumSize(new java.awt.Dimension(100, 33));
+        btnStart.setMinimumSize(new java.awt.Dimension(100, 33));
+        btnStart.setName("btnStart"); // NOI18N
+        btnStart.setPreferredSize(new java.awt.Dimension(100, 33));
+        btnStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStartActionPerformed(evt);
+            }
+        });
+        btnStart.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnStartKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        menuPanel.add(btnStart, gridBagConstraints);
+
+        mainPanel.add(menuPanel, java.awt.BorderLayout.CENTER);
+
+        initPanel.setName("initPanel"); // NOI18N
+        initPanel.setLayout(new java.awt.BorderLayout());
+
         btnNext.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/next.png"))); // NOI18N
         btnNext.setText("Siguiente");
         btnNext.setToolTipText("Siguiente formulario");
         btnNext.setMaximumSize(new java.awt.Dimension(83, 33));
@@ -239,13 +263,9 @@ public class FrameInicio extends javax.swing.JFrame {
                 btnNextKeyPressed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        menuPanel.add(btnNext, gridBagConstraints);
+        initPanel.add(btnNext, java.awt.BorderLayout.CENTER);
 
-        mainPanel.add(menuPanel, java.awt.BorderLayout.CENTER);
+        mainPanel.add(initPanel, java.awt.BorderLayout.PAGE_END);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -263,30 +283,11 @@ public class FrameInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
-        FrameKey frm = new FrameKey();
-        frm.setVisible(true); 
+        openFrameKey();
     }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
-        Vx820Segura pinpad = new Vx820Segura("EN");
-        
-        //Initial parameters
-        HashMap config = new HashMap(5);
-        config.put("PORT", txtPort.getText());
-        config.put("BAUD_RATE", txtVelocity.getText());
-        config.put("PARITY", txtParity.getText());
-        config.put("STOP_BITS", txtStopBit.getText());
-        config.put("DATA_BITS", txtDataBit.getText());
-        
-        //Pinpad initializated according to the established parameters
-        try {
-            pinpad.prepareDevice(config);
-            
-            JOptionPane.showMessageDialog(null, "Dispositivo inicializado correctamente");
-        }
-        catch(BanorteException e) {
-            System.out.println("Falla al inicializar Pinpad: " + e.getMessage());
-        }
+        start();
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void txtPortKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPortKeyPressed
@@ -313,9 +314,17 @@ public class FrameInicio extends javax.swing.JFrame {
         setFocus(evt);
     }//GEN-LAST:event_btnNextKeyPressed
 
+    private void btnStartKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnStartKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_btnStartKeyPressed
+    
+    /**
+     * Sets the key where the cursor must be located
+     * @param evt the key event
+     */
     public void setFocus(java.awt.event.KeyEvent evt) {
-        String key = getSourceType(evt);
-        int keyCode = evt.getKeyCode();
+        String key = getKeySource(evt);
+        int keyCode = evt.getKeyCode();                
         
         if(keyCode == 40) {                        
             switch(key){
@@ -323,7 +332,8 @@ public class FrameInicio extends javax.swing.JFrame {
                 case "txtVelocity": txtParity.requestFocusInWindow(); break;
                 case "txtParity": txtDataBit.requestFocusInWindow(); break;
                 case "txtDataBit": txtStopBit.requestFocusInWindow(); break;
-                case "txtStopBit": btnNext.requestFocusInWindow(); break;
+                case "txtStopBit": btnStart.requestFocusInWindow(); break;
+                case "btnStart": btnNext.requestFocusInWindow(); break;
             }
         }
         else if(keyCode == 38){
@@ -332,12 +342,24 @@ public class FrameInicio extends javax.swing.JFrame {
                 case "txtParity": txtVelocity.requestFocusInWindow(); break;
                 case "txtDataBit": txtParity.requestFocusInWindow(); break;
                 case "txtStopBit": txtDataBit.requestFocusInWindow(); break;
-                case "btnNext": txtStopBit.requestFocusInWindow(); break;
+                case "btnStart": txtStopBit.requestFocusInWindow(); break;
+                case "btnNext": btnStart.requestFocusInWindow(); break;
             }
+        }
+        else if(keyCode == 10 && key.equals("btnNext")){
+            openFrameKey();
+        }
+        else if(keyCode == 10 && key.equals("btnStart")){
+            start();
         }
     }
     
-    public String getSourceType(java.awt.event.KeyEvent evt) {
+    /**
+     * Gets the name of the key event source.
+     * @param evt the key event
+     * @return the name of the source where the event is found
+     */
+    public String getKeySource(java.awt.event.KeyEvent evt) {
         String keySource = evt.getSource().getClass().getSimpleName();
         String key = null;
         
@@ -350,14 +372,46 @@ public class FrameInicio extends javax.swing.JFrame {
     }
     
     /**
+     * Opens the FrameKey window
+     */
+    public void openFrameKey(){
+        this.setVisible(false);
+        
+        FrameKey frm = new FrameKey();
+        frm.setVisible(true);        
+    }
+    
+    /**
+     * Starts the device configuration
+     */
+    public void start(){
+        Vx820Segura pinpad = new Vx820Segura("EN");
+        
+        //Initial parameters
+        HashMap configuration = new HashMap(5);
+        
+        configuration.put("PORT", txtPort.getText());
+        configuration.put("BAUD_RATE", txtVelocity.getText());
+        configuration.put("PARITY", txtParity.getText());
+        configuration.put("STOP_BITS", txtStopBit.getText());
+        configuration.put("DATA_BITS", txtDataBit.getText());
+        
+        //Pinpad initializated according to the established parameters
+        try {
+            pinpad.prepareDevice(configuration);
+            
+            JOptionPane.showMessageDialog(null, "Device successfully initialized");
+        }
+        catch(BanorteException e) {
+            System.out.println("Pinpad initialization error: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Main method for application execution
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    public static void main(String args[]) {        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -365,19 +419,10 @@ public class FrameInicio extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrameInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrameInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrameInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FrameInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrameInicio().setVisible(true);
@@ -388,6 +433,7 @@ public class FrameInicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnStart;
+    private javax.swing.JPanel initPanel;
     private javax.swing.JLabel lblDataBit;
     private javax.swing.JLabel lblParity;
     private javax.swing.JLabel lblPort;
@@ -396,6 +442,7 @@ public class FrameInicio extends javax.swing.JFrame {
     private javax.swing.JLabel lblVelocity;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel menuPanel;
+    private javax.swing.JPanel titlePanel;
     private javax.swing.JTextField txtDataBit;
     private javax.swing.JTextField txtParity;
     private javax.swing.JTextField txtPort;

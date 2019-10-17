@@ -12,14 +12,14 @@ public class FrameVenta extends javax.swing.JFrame {
     public FrameVenta() {
         initComponents();
         
-        TxtMerchantid.setText("");
-        TxtUser.setText("");
-        TxtPass.setText("");
-        TxtTerminalid.setText("");
-        TxtControl.setText("");
-        TxtAmount.setText("0.01");
-        TxtLan.setText("EN");
-        TxtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");       
+        txtMerchantId.setText("");
+        txtUser.setText("");
+        txtPassword.setText("");
+        txtTerminalId.setText("");
+        txtControlNumber.setText("");
+        txtAmount.setText("0.01");
+        txtLanguage.setText("EN");
+        txtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");       
     }
 
     /**
@@ -30,163 +30,412 @@ public class FrameVenta extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        TxtMerchantid = new javax.swing.JTextField();
-        TxtUser = new javax.swing.JTextField();
-        TxtPass = new javax.swing.JTextField();
-        TxtTerminalid = new javax.swing.JTextField();
-        TxtAmount = new javax.swing.JTextField();
-        TxtControl = new javax.swing.JTextField();
-        TxtLan = new javax.swing.JTextField();
-        TxtUrl = new javax.swing.JTextField();
+        titlePanel = new javax.swing.JPanel();
+        lblTitle = new javax.swing.JLabel();
+        salePanel = new javax.swing.JPanel();
+        lblMerchantId = new javax.swing.JLabel();
+        txtMerchantId = new javax.swing.JTextField();
+        lblUser = new javax.swing.JLabel();
+        txtUser = new javax.swing.JTextField();
+        lblPassword = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JTextField();
+        lblTerminalId = new javax.swing.JLabel();
+        txtTerminalId = new javax.swing.JTextField();
+        lblAmount = new javax.swing.JLabel();
+        txtAmount = new javax.swing.JTextField();
+        lblControlNumber = new javax.swing.JLabel();
+        txtControlNumber = new javax.swing.JTextField();
+        lblLanguage = new javax.swing.JLabel();
+        txtLanguage = new javax.swing.JTextField();
+        lblUrl = new javax.swing.JLabel();
+        txtUrl = new javax.swing.JTextField();
+        btnSale = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("JPinpad v0.1");
+        setMinimumSize(new java.awt.Dimension(600, 400));
+        setName("frmSales"); // NOI18N
 
-        jLabel1.setText("Venta");
+        titlePanel.setMinimumSize(new java.awt.Dimension(600, 20));
+        titlePanel.setName("titlePanel"); // NOI18N
+        titlePanel.setPreferredSize(new java.awt.Dimension(600, 20));
 
-        jLabel2.setText("Merchant ID");
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblTitle.setText("Ventas");
+        lblTitle.setName("lblTitle"); // NOI18N
 
-        jLabel3.setText("User");
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(titlePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lblTitle)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(titlePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lblTitle)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
-        jLabel4.setText("Password");
+        getContentPane().add(titlePanel, java.awt.BorderLayout.NORTH);
 
-        jLabel5.setText("Terminal ID");
+        salePanel.setMinimumSize(new java.awt.Dimension(600, 380));
+        salePanel.setName("salePanel"); // NOI18N
+        salePanel.setPreferredSize(new java.awt.Dimension(600, 380));
+        salePanel.setLayout(new java.awt.GridBagLayout());
 
-        jLabel6.setText("Amount");
+        lblMerchantId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblMerchantId.setText("Merchant ID");
+        lblMerchantId.setName("lblMerchantId"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblMerchantId, gridBagConstraints);
 
-        jLabel7.setText("Control Number");
-
-        jLabel8.setText("Language");
-
-        jLabel9.setText("URL");
-
-        jButton1.setText("Vender");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        txtMerchantId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtMerchantId.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtMerchantId.setName("txtMerchantId"); // NOI18N
+        txtMerchantId.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtMerchantId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtMerchantIdKeyPressed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtMerchantId, gridBagConstraints);
 
-        TxtLan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TxtLanActionPerformed(evt);
+        lblUser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblUser.setText("User");
+        lblUser.setName("lblUser"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblUser, gridBagConstraints);
+
+        txtUser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtUser.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtUser.setName("txtUser"); // NOI18N
+        txtUser.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtUser.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUserKeyPressed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtUser, gridBagConstraints);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jButton1)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(TxtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TxtUser, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                    .addComponent(TxtMerchantid)))
-                            .addComponent(TxtTerminalid, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtControl, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtLan, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtUrl, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 169, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(TxtMerchantid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(TxtUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(TxtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(TxtTerminalid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(TxtAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(TxtControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(TxtLan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(TxtUrl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        lblPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblPassword.setText("Password");
+        lblPassword.setName("lblPassword"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblPassword, gridBagConstraints);
+
+        txtPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtPassword.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtPassword.setName("txtPassword"); // NOI18N
+        txtPassword.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPasswordKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtPassword, gridBagConstraints);
+
+        lblTerminalId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblTerminalId.setText("Terminal ID");
+        lblTerminalId.setName("lblTerminalId"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblTerminalId, gridBagConstraints);
+
+        txtTerminalId.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTerminalId.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtTerminalId.setName("txtTerminalId"); // NOI18N
+        txtTerminalId.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtTerminalId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtTerminalIdKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtTerminalId, gridBagConstraints);
+
+        lblAmount.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblAmount.setText("Amount");
+        lblAmount.setName("lblAmount"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblAmount, gridBagConstraints);
+
+        txtAmount.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAmount.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtAmount.setName("txtAmount"); // NOI18N
+        txtAmount.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtAmountKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtAmount, gridBagConstraints);
+
+        lblControlNumber.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblControlNumber.setText("Control Number");
+        lblControlNumber.setName("lblControlNumber"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblControlNumber, gridBagConstraints);
+
+        txtControlNumber.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtControlNumber.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtControlNumber.setName("txtControlNumber"); // NOI18N
+        txtControlNumber.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtControlNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtControlNumberKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtControlNumber, gridBagConstraints);
+
+        lblLanguage.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblLanguage.setText("Language");
+        lblLanguage.setName("lblLanguage"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblLanguage, gridBagConstraints);
+
+        txtLanguage.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtLanguage.setMinimumSize(new java.awt.Dimension(200, 30));
+        txtLanguage.setName("txtLanguage"); // NOI18N
+        txtLanguage.setPreferredSize(new java.awt.Dimension(200, 30));
+        txtLanguage.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtLanguageKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtLanguage, gridBagConstraints);
+
+        lblUrl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblUrl.setText("URL");
+        lblUrl.setName("lblUrl"); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        salePanel.add(lblUrl, gridBagConstraints);
+
+        txtUrl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtUrl.setMinimumSize(new java.awt.Dimension(400, 30));
+        txtUrl.setName("txtUrl"); // NOI18N
+        txtUrl.setPreferredSize(new java.awt.Dimension(400, 30));
+        txtUrl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtUrlKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(txtUrl, gridBagConstraints);
+
+        btnSale.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnSale.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sales.png"))); // NOI18N
+        btnSale.setText("Vender");
+        btnSale.setMaximumSize(new java.awt.Dimension(100, 33));
+        btnSale.setMinimumSize(new java.awt.Dimension(100, 33));
+        btnSale.setName("btnSale"); // NOI18N
+        btnSale.setPreferredSize(new java.awt.Dimension(100, 33));
+        btnSale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaleActionPerformed(evt);
+            }
+        });
+        btnSale.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnSaleKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.weighty = 1.0;
+        salePanel.add(btnSale, gridBagConstraints);
+
+        getContentPane().add(salePanel, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TxtLanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLanActionPerformed
-        
-    }//GEN-LAST:event_TxtLanActionPerformed
+    private void btnSaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaleActionPerformed
+        sale();
+    }//GEN-LAST:event_btnSaleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //Creamos el objeto pinpad
+    private void txtTerminalIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTerminalIdKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtTerminalIdKeyPressed
+
+    private void txtMerchantIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMerchantIdKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtMerchantIdKeyPressed
+
+    private void txtUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtUserKeyPressed
+
+    private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtPasswordKeyPressed
+
+    private void txtAmountKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAmountKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtAmountKeyPressed
+
+    private void txtControlNumberKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtControlNumberKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtControlNumberKeyPressed
+
+    private void txtLanguageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtLanguageKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtLanguageKeyPressed
+
+    private void txtUrlKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUrlKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_txtUrlKeyPressed
+
+    private void btnSaleKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnSaleKeyPressed
+        setFocus(evt);
+    }//GEN-LAST:event_btnSaleKeyPressed
+
+    /**
+     * Sets the key where the cursor must be located
+     * @param evt the key event
+     */
+    public void setFocus(java.awt.event.KeyEvent evt) {
+        String key = getKeySource(evt);
+        int keyCode = evt.getKeyCode();
+        
+        if(keyCode == 40) {                        
+            switch(key){
+                case "txtMerchantId": txtUser.requestFocusInWindow(); break;
+                case "txtUser": txtPassword.requestFocusInWindow(); break;
+                case "txtPassword": txtTerminalId.requestFocusInWindow(); break;
+                case "txtTerminalId": txtAmount.requestFocusInWindow(); break;
+                case "txtAmount": txtControlNumber.requestFocusInWindow(); break;
+                case "txtControlNumber": txtLanguage.requestFocusInWindow(); break;
+                case "txtLanguage": txtUrl.requestFocusInWindow(); break;
+                case "txtUrl": btnSale.requestFocusInWindow(); break;
+            }
+        }
+        else if(keyCode == 38){
+            switch(key){                
+                case "txtUser": txtMerchantId.requestFocusInWindow(); break;
+                case "txtPassword": txtUser.requestFocusInWindow(); break;
+                case "txtTerminalId": txtPassword.requestFocusInWindow(); break;                
+                case "txtAmount": txtTerminalId.requestFocusInWindow(); break;                
+                case "txtControlNumber": txtAmount.requestFocusInWindow(); break;
+                case "txtLanguage": txtControlNumber.requestFocusInWindow(); break;
+                case "txtUrl": txtLanguage.requestFocusInWindow(); break;
+                case "btnSale": txtUrl.requestFocusInWindow(); break;
+            }
+        }
+        else if(keyCode == 10 && key.equals("btnSale")){
+            sale();
+        }                
+    }
+    
+    /**
+     * Gets the name of the key event source.
+     * @param evt the key event
+     * @return the name of the source where the event is found
+     */
+    public String getKeySource(java.awt.event.KeyEvent evt) {
+        String keySource = evt.getSource().getClass().getSimpleName();
+        String key = null;
+        
+        if(keySource.equals("JTextField"))
+            key = ((JTextField)evt.getSource()).getName();
+        else if(keySource.equals("JButton"))
+            key = ((JButton)evt.getSource()).getName();
+        
+        return key;
+    }
+    
+    public void sale(){
+        //Pinpad object creation
         Vx820Segura pinpad  = new Vx820Segura("EN");
 
-        //Se crean los HashMaps para los parámetros de la lectura de la tarjeta 
+        //Creation of  HashMaps for setting card reading parameters
         HashMap leerEntrada = new HashMap(20);
         HashMap leerSalida = new HashMap(20);
         
-        //Se crean los HashMaps para los parámetros para enviar la transacción
+        //Creation of HashMaps for setting transaction parameters
         HashMap parametrosEntrada = new HashMap(20);
         HashMap parametrosSalida = new HashMap(20);
 
-        //Ingresamos los parámetros de entrada para la lectura de la tarjeta
+        //Input parameters for card reading
         String amount = "0.01";
         String PagoMovil = "0";
         leerEntrada.put("AMOUNT", amount);
         leerEntrada.put("PAGO_MOVIL", PagoMovil);
 
-        //Se solicita la lectura de la tarje|ta
+        //Card reading request
         try {
             pinpad.readCard(leerEntrada, leerSalida);
         }
@@ -194,37 +443,37 @@ public class FrameVenta extends javax.swing.JFrame {
             System.out.println("Error al leer la tarjeta" + e.getMessage());
         }
 
-        //Recuperamos datos de la Lectura de la Tarjeta
+        //Card reading retrieval
         //String Track1 = (String) leerSalida.get("TRACK1");
         String Track2 = (String) leerSalida.get("TRACK2");
 
-        //Determinar el Tipo de Entrada (Banda/Chip/Fallback)
+        //Input type determination (Banda, Chip, Fallback)
         String PosEntryMode = (String) leerSalida.get("ENTRY_MODE");
         String declinadaChip = "";
         String EmvTags = "";
 
-        //Revisamos si es de Chip para asi poder obetener los EMVTAGS
+        //Obtaining EMVTAGS in case of CHIP mode
         if (PosEntryMode.equals("CHIP")) {
             EmvTags = (String) leerSalida.get("EMV_TAGS");
             parametrosEntrada.put("EMV_TAGS", EmvTags);
             declinadaChip = (String)leerSalida.get("CHIP_DECLINED");
         }
 
-        //Primeramente validamos si no fue un Declinado Offline, validando el valor de la variable de retorno DECLINADA_CHIP
+        //Validate if is not Offline declined by DECLINADA_CHIP variable value
         if (declinadaChip.equals("1")) {
-            //Aquí termina la transacción
+            //End transaction
             System.out.println("La transacción fue declinada offline");
             JOptionPane.showMessageDialog(null,"Declinada Offline");
         }
         else {
-            //Se envía transacción a Banorte mediante el método readCard
-            //Llenamos la tabla para enviar la transacción
-            parametrosEntrada.put("MERCHANT_ID",TxtMerchantid.getText());
-            parametrosEntrada.put("USER", TxtUser.getText());
-            parametrosEntrada.put("PASSWORD", TxtPass.getText());
+            //Sending transaction to Banorte by using readCard method
+            //Setting HashMaps transaction parameters
+            parametrosEntrada.put("MERCHANT_ID",txtMerchantId.getText());
+            parametrosEntrada.put("USER", txtUser.getText());
+            parametrosEntrada.put("PASSWORD", txtPassword.getText());
             parametrosEntrada.put("CMD_TRANS", "AUTH");
-            parametrosEntrada.put("TERMINAL_ID", TxtTerminalid.getText());
-            parametrosEntrada.put("CONTROL_NUMBER", TxtControl.getText());
+            parametrosEntrada.put("TERMINAL_ID", txtTerminalId.getText());
+            parametrosEntrada.put("CONTROL_NUMBER", txtControlNumber.getText());
             parametrosEntrada.put("MODE", "PRD");
             parametrosEntrada.put("AMOUNT", amount);
             parametrosEntrada.put("TRACK2", Track2);
@@ -238,8 +487,7 @@ public class FrameVenta extends javax.swing.JFrame {
             //parametrosEntrada.put("TRACK1", EmvTags);
             //}
 
-            //Método Enviar Transacción
-            //Se realiza el proceso de la transacción
+            //Processing the transaction
             try {
                 pinpad.processTransaction(parametrosEntrada, parametrosSalida);
             } 
@@ -247,22 +495,22 @@ public class FrameVenta extends javax.swing.JFrame {
                 System.out.println("Falla al procesar la transacción: " + e.getMessage());
             }
 
-            // Validamos si la tarjeta es CHIP
+            //CHIP card mode validation
             if (PosEntryMode.equals("CHIP")) {
-                //Se crean los HashMaps para los parámetros de Notificar Resultado
+                //Creation of HashMaps for notifying parameters result
                 HashMap parametrosNotifyEntrada = new HashMap(20);
                 HashMap parametrosNotifySalida = new HashMap(20);
                 
-                //Obtenemos datos de salida del procesamiento de la transacción
+                //Obtaingin transaction process output data
                 String resultadoPayw = (String) parametrosSalida.get("PAYW_RESULT");
                 String codigoAut = (String)parametrosSalida.get("AUTH_CODE");
                 String datosEMV = (String)parametrosSalida.get("EMV_TAGS");
                 
-                ////aqui me trae nulos
-                //Validamos si hubo respuesta de la transacción
+                //Null precense
+                //Validating transaction response
                 if(resultadoPayw != null) {
                     
-                    //Validamos si existe información en DATOS_EMV
+                    //Validating DATOS_EMV data
                     if (datosEMV != null) {
                         parametrosNotifyEntrada.put("EMV_TAGS", datosEMV);
                     }
@@ -282,7 +530,7 @@ public class FrameVenta extends javax.swing.JFrame {
                     parametrosNotifyEntrada.put("RESULT", "NO_RESPONSE");
                 }
 
-                //Método notificar resultado
+                //Notify transaction result
                 try {
                     pinpad.notifyResult(parametrosNotifyEntrada, parametrosNotifySalida);
                 }
@@ -290,23 +538,23 @@ public class FrameVenta extends javax.swing.JFrame {
                     System.out.println("Error al notificar el resultado:" +e.getMessage());
                 }
 
-                //Obtenemos el resultado de notificar la transacción
+                //Obtaining transaction result notification
                 String resultadoEMV = (String) parametrosNotifySalida.get("EMV_RESULT");
 
-                //Validamos resultadoEMV
+                //Validation of resultadoEMV
                 if (resultadoEMV != null) {
                     if (resultadoEMV.equals("D") && resultadoPayw.equals("A")) {
                         JOptionPane.showMessageDialog(null,"DECLINADA EMV");
                         
-                        //Se genera el reverso por Declinado EMV
-                        //Se crean los hashMaps para el reverso
+                        //Reverse generation for EMV declination
+                        //HashMaps creation
                         HashMap reversaEntrada = new HashMap(20);
                         HashMap reversaSalida = new HashMap(20);
                         
-                        //Se obtiene la referencia de la transacción anterior
+                        //Obtaining transaction reference
                         String reference = (String) parametrosSalida.get("REFERENCE");
                         
-                        //Se llena la table con los parámetros del reverso
+                        //Setting HashMap parameters
                         reversaEntrada.put("MERCHANT_ID", "7395007");
                         reversaEntrada.put("USER", "a7395007");
                         reversaEntrada.put("PASSWORD", "*******");
@@ -360,8 +608,8 @@ public class FrameVenta extends javax.swing.JFrame {
             System.out.println("Falla al terminar la transacción: " +
             e.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -399,23 +647,25 @@ public class FrameVenta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TxtAmount;
-    private javax.swing.JTextField TxtControl;
-    private javax.swing.JTextField TxtLan;
-    private javax.swing.JTextField TxtMerchantid;
-    private javax.swing.JTextField TxtPass;
-    private javax.swing.JTextField TxtTerminalid;
-    private javax.swing.JTextField TxtUrl;
-    private javax.swing.JTextField TxtUser;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btnSale;
+    private javax.swing.JLabel lblAmount;
+    private javax.swing.JLabel lblControlNumber;
+    private javax.swing.JLabel lblLanguage;
+    private javax.swing.JLabel lblMerchantId;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblTerminalId;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblUrl;
+    private javax.swing.JLabel lblUser;
+    private javax.swing.JPanel salePanel;
+    private javax.swing.JPanel titlePanel;
+    private javax.swing.JTextField txtAmount;
+    private javax.swing.JTextField txtControlNumber;
+    private javax.swing.JTextField txtLanguage;
+    private javax.swing.JTextField txtMerchantId;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtTerminalId;
+    private javax.swing.JTextField txtUrl;
+    private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }
