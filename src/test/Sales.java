@@ -12,14 +12,7 @@ public class Sales extends javax.swing.JFrame {
     public Sales() {
         initComponents();
         
-        txtMerchantId.setText("");
-        txtUser.setText("");
-        txtPassword.setText("");
-        txtTerminalId.setText("");
-        txtControlNumber.setText("");
-        txtAmount.setText("0.01");
-        txtLanguage.setText("EN");
-        txtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");       
+        setDefaultInformation();       
     }
 
     /**
@@ -363,6 +356,20 @@ public class Sales extends javax.swing.JFrame {
         setFocus(evt);
     }//GEN-LAST:event_btnSaleKeyPressed
 
+    /**
+     * Sets the Sales frame's information
+     */
+    public void setDefaultInformation(){
+        txtMerchantId.setText("");
+        txtUser.setText("");
+        txtPassword.setText("");
+        txtTerminalId.setText("");
+        txtControlNumber.setText("");
+        txtAmount.setText("0.01");
+        txtLanguage.setText("EN");
+        txtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");
+    }
+    
     /**
      * Sets the key where the cursor must be located
      * @param evt the key event

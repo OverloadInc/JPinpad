@@ -15,12 +15,7 @@ public class KeyLoader extends javax.swing.JFrame {
     public KeyLoader() {
         initComponents();
         
-        txtId.setText("");
-        txtUser.setText("");
-        txtPassword.setText("");
-        txtControlNumber.setText("");
-        txtLanguage.setText("EN");
-        txtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");
+        setDefaultInformation();
     }
 
     /**
@@ -328,6 +323,18 @@ public class KeyLoader extends javax.swing.JFrame {
         setFocus(evt);
     }//GEN-LAST:event_btnSaleKeyPressed
 
+    /**
+     * Sets the KeyLoader frame's information
+     */
+    public void setDefaultInformation(){
+        txtId.setText("");
+        txtUser.setText("");
+        txtPassword.setText("");
+        txtControlNumber.setText("");
+        txtLanguage.setText("EN");
+        txtUrl.setText("https://via.pagosbanorte.com/InterredesSeguro");
+    }
+    
     /**
      * Sets the key where the cursor must be located
      * @param evt the key event

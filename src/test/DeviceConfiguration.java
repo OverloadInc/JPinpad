@@ -5,14 +5,14 @@ import com.banorte.pinpad.Vx820Segura;
 import java.util.HashMap;
 import javax.swing.*;
 
-public class DeviceConfiguration extends javax.swing.JFrame {
+public class DeviceConfiguration extends JFrame {
 
     /**
      * Constructor for component initialization
      */
     public DeviceConfiguration() {
         initComponents();
-        setInformation();        
+        setDefaultInformation();        
     }
 
     /**
@@ -316,7 +316,7 @@ public class DeviceConfiguration extends javax.swing.JFrame {
     /**
      * Sets the JTextField information
      */
-    public void setInformation(){
+    public void setDefaultInformation(){
         txtPort.setText("COM9");
         txtVelocity.setText("19200");
         txtParity.setText("N");
