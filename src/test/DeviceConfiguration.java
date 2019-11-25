@@ -391,7 +391,7 @@ public class DeviceConfiguration extends JFrame {
      * Starts the device configuration
      */
     public void start(){
-        Vx820Segura pinpad = new Vx820Segura("EN");
+        Vx820Segura pinpad = new Vx820Segura("EN");        
         
         //Initial parameters
         HashMap configuration = new HashMap(5);
@@ -429,10 +429,8 @@ public class DeviceConfiguration extends JFrame {
             java.util.logging.Logger.getLogger(DeviceConfiguration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DeviceConfiguration().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new DeviceConfiguration().setVisible(true);
         });
     }
 
